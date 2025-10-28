@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  model-server:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    command: uvicorn model_server_real:app --host 0.0.0.0 --port 8000 --reload
+
+  flask-ui:
+    image: python:3.11-slim
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "5002:5002"
+    command: bash -lc "pip install -r requirements.txt && python3 app_fixed.py"
