@@ -95,8 +95,7 @@ smart-cpu-autoscaler/
 
 1. Clone Repository
 
-git clone https://github.com/bobbashivaram/Smart-CPU-Resource-Optimisation
-.git
+git clone https://github.com/shivarambobba/Smart-CPU-Resource-Optimisation.git
 cd smart-cpu-autoscaler
 
 2. Create Virtual Environment
